@@ -1,6 +1,6 @@
-declare namespace senseisBlocks {
-    //% shim=senseisBlocks::mouseX
+declare namespace browserEvents {
+    //% shim=browserEvents::mouseX
     function mouseX(): number;
-    //% shim=senseisBlocks::mouseY
+    //% shim=browserEvents::mouseY
     function mouseY(): number;
 }

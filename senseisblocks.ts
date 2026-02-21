@@ -66,22 +66,20 @@ namespace senseisBlocks {
 
 
     const INTERNAL_POINTER_DOWN = 6868;
-
     type MouseHandler = (x: number, y: number) => void;
-
     let _handler: MouseHandler;
 
     function __init() {
         control.internalOnEvent(INTERNAL_POINTER_DOWN, 1, () => {
-            if (_handler) _handler(mouseX(), mouseY());
+            if (_handler) _handler(browserEvents.mouseX(), browserEvents.mouseY());
         }, 16);
     }
     __init();
 
-    //% blockId=browserEvents_onLeftClick
+    //% blockId=senseis_onLeftClick
     //% block="on left mouse button pressed $x $y"
     //% draggableParameters="reporter"
-    //% group="Mouse"
+    //% subcategory="Mouse"
     //% weight=100
     export function onLeftClick(handler: (x: number, y: number) => void) {
         _handler = handler;

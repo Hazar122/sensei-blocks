@@ -1,15 +1,7 @@
 #include "pxt.h"
-
-namespace senseisBlocks {
-
+namespace browserEvents {
     //%
-    int mouseX() {
-        return -1;
-    }
-
+    int mouseX() { return -1; }
     //%
-    int mouseY() {
-        return -1;
-    }
-
+    int mouseY() { return -1; }
 }

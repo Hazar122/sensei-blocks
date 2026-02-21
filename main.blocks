@@ -1,1 +1,18 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables></variables></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="M}uY.AV5fA5#1z(T-z7,">mySprite</variable><variable type="KIND_SpriteKind" id="$[i@:Qu`wLeoq;H_g]U(">Player</variable><variable type="KIND_SpriteKind" id="I{1K4-bS)8a|p:9C2Hw%">Projectile</variable><variable type="KIND_SpriteKind" id="tXgZY`L72@WB.0pTFN1m">Food</variable><variable type="KIND_SpriteKind" id="BI|VWFvFEOXfq_8GMb?.">Enemy</variable></variables><block type="senseis_onLeftClick" id="+b]sB6-2x|9PZ3TG.(az" x="-1666" y="-953"><value name="HANDLER_DRAG_PARAM_x"><block type="argument_reporter_number" id="/$j_,u8s.[jxLaPZ_4c$" deletable="false"><mutation localizationname="senseisBlocks.onLeftClick|handlerParam|x"></mutation><field name="VALUE">x</field></block></value><value name="HANDLER_DRAG_PARAM_y"><block type="argument_reporter_number" id="Hpgr.P5~27_naj_sl5]T" deletable="false"><mutation localizationname="senseisBlocks.onLeftClick|handlerParam|y"></mutation><field name="VALUE">y</field></block></value><statement name="HANDLER"><block type="variables_set" id="1[?FcO469+1z(^6o,d,j"><field name="VAR" id="M}uY.AV5fA5#1z(T-z7,">mySprite</field><value name="VALUE"><shadow type="math_number" id="P9hnqEaF/2B}YY},!U[1"><field name="NUM">0</field></shadow><block type="spritescreate" id="M:=2pw:X~$~u,,/fTW#P"><value name="img"><shadow type="screen_image_picker" id="^7|3vi}xFO%vQ~fn+=]K"><field name="img">img`
+. . . . . . 2 2 2 2 . . . . . . 
+. . . . 2 2 3 3 3 3 2 e . . . . 
+. . . 2 3 d 1 1 d d 3 2 e . . . 
+. . 2 3 1 d 3 3 3 d d 3 e . . . 
+. 2 3 1 3 3 3 3 3 d 1 3 b e . . 
+. 2 1 d 3 3 3 3 d 3 3 1 3 b b . 
+2 3 1 d 3 3 1 1 3 3 3 1 3 4 b b 
+2 d 3 3 d 1 3 1 3 3 3 1 3 4 4 b 
+2 d 3 3 3 1 3 1 3 3 3 1 b 4 4 e 
+2 d 3 3 3 1 1 3 3 3 3 1 b 4 4 e 
+e d 3 3 3 3 d 3 3 3 d d b 4 4 e 
+e d d 3 3 3 d 3 3 3 1 3 b 4 b e 
+e 3 d 3 3 1 d d 3 d 1 b b e e . 
+. e 3 1 1 d d 1 1 1 b b e e e . 
+. . e 3 3 3 3 3 3 b e e e e . . 
+. . . e e e e e e e e e e . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="6K|Xrd;~k7YiHVK2v#iC"><field name="MEMBER">Player</field></shadow></value></block></value></block></statement></block></xml>
