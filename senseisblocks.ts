@@ -66,7 +66,7 @@ namespace senseisBlocks {
 
 
     const INTERNAL_POINTER_DOWN = 6868;
-    
+
     type MouseHandler = (x: number, y: number) => void;
 
     let _handler: MouseHandler;

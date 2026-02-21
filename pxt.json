@@ -8,7 +8,9 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "assets.json"
+        "assets.json",
+        "senseisblocks.ts",
+        "shim.d.ts"
     ],
     "testFiles": [
         "test.ts"
