@@ -232,4 +232,135 @@ namespace senseisBlocks {
         return count
     }
 
+
+
+
+
+    /**
+     * Create a sprite that is automatically scaled down to fit in 16x16
+     */
+    //% block="create scaled sprite $img of kind $kind"
+    //% img.shadow=screen_image_picker
+    //% kind.shadow=spritekind
+    //% blockSetVariable=mySprite
+    //% subcategory="Sprite"
+    //% weight=70
+    export function createScaledSprite(img: Image, kind?: number): Sprite {
+        const scene = game.currentScene();
+        const sprite = new Sprite(img)
+        sprite.setKind(kind);
+        scene.physicsEngine.addSprite(sprite);
+        scene.createdHandlers
+            .filter(h => h.kind == kind)
+            .forEach(h => h.handler(sprite));
+        if (img.height > 16 && img.height >= img.width) {
+            sprite.setScale(16 / img.height)
+        } else if (img.width > 16 && img.width > img.height) {
+            sprite.setScale(16 / img.width)
+        }
+        return sprite
+    }
+
+
+
+
+
+    // ══════════════════════════════════════════════════════════
+    // ── Game State ───────────────────────────────────────────
+    // ══════════════════════════════════════════════════════════
+
+    //% shim=KIND_GET
+    //% blockId=senseis_flagKind
+    //% block="$i"
+    //% kindNamespace=SenseiFlag
+    //% kindMemberName=flag
+    //% kindPromptHint="e.g. IsAlive, HasKey, ..."
+    export function _flagKind(i: number): number {
+        return i
+    }
+
+    //% shim=KIND_GET
+    //% blockId=senseis_counterKind
+    //% block="$i"
+    //% kindNamespace=SenseiCounter
+    //% kindMemberName=counter
+    //% kindPromptHint="e.g. Score, Health, ..."
+    export function _counterKind(i: number): number {
+        return i
+    }
+
+    let _flags: boolean[] = []
+    let _counters: number[] = []
+
+    //% block="set $flag to $value"
+    //% subcategory="Game State"
+    //% flag.shadow=senseis_flagKind
+    //% value.shadow="toggleOnOff"
+    //% weight=100
+    export function setFlag(flag: number, value: boolean) {
+        _flags[flag] = value
+    }
+
+    //% block="get $flag"
+    //% subcategory="Game State"
+    //% flag.shadow=senseis_flagKind
+    //% weight=99
+    export function getFlag(flag: number): boolean {
+        return _flags[flag] || false
+    }
+
+    //% block="toggle $flag"
+    //% subcategory="Game State"
+    //% flag.shadow=senseis_flagKind
+    //% weight=98
+    export function toggleFlag(flag: number) {
+        _flags[flag] = !(_flags[flag] || false)
+    }
+
+    //% block="set $counter to $value"
+    //% subcategory="Game State"
+    //% counter.shadow=senseis_counterKind
+    //% weight=97
+    export function setCounter(counter: number, value: number) {
+        _counters[counter] = value
+    }
+
+    //% block="get $counter"
+    //% subcategory="Game State"
+    //% counter.shadow=senseis_counterKind
+    //% weight=96
+    export function getCounter(counter: number): number {
+        return _counters[counter] || 0
+    }
+
+    //% block="change $counter by $amount"
+    //% subcategory="Game State"
+    //% counter.shadow=senseis_counterKind
+    //% amount.defl=1
+    //% weight=95
+    export function changeCounter(counter: number, amount: number) {
+        _counters[counter] = (_counters[counter] || 0) + amount
+    }
+
+    //% block="reset all game state"
+    //% subcategory="Game State"
+    //% weight=90
+    export function resetAllState() {
+        _flags = []
+        _counters = []
+    }
+}
+
+namespace SenseiFlag {
+    //% isKind
+    export const Flag1 = senseisBlocks._flagKind(0)
+    //% isKind
+    export const Flag2 = senseisBlocks._flagKind(1)
+}
+
+namespace SenseiCounter {
+    //% isKind
+    export const Counter1 = senseisBlocks._counterKind(0)
+    //% isKind
+    export const Counter2 = senseisBlocks._counterKind(1)
 }

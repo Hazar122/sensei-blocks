@@ -1,18 +1,1 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="?S}*o09IbIH5Y)^.Hf;T">mySprite</variable><variable type="KIND_SpriteKind" id="8usI@s;0jD1;^u{bN5%/">Player</variable><variable type="KIND_SpriteKind" id="wh(mcg#z?(f,F2o0i:md">Projectile</variable><variable type="KIND_SpriteKind" id="xHm?Qd|ADYa*p2D(9xTy">Food</variable><variable type="KIND_SpriteKind" id="6EiossmNo^wE$7)xlwsm">Enemy</variable></variables><block type="senseis_onLeftClick" id="1)E/~Zn}ot=kAceTL1UN" x="20" y="20"><value name="HANDLER_DRAG_PARAM_x"><block type="argument_reporter_number" id="UWdndbe(K}^?W]ES92;." deletable="false"><field name="VALUE">x</field></block></value><value name="HANDLER_DRAG_PARAM_y"><block type="argument_reporter_number" id="biQvwv,)|@sl#N}2oonB" deletable="false"><field name="VALUE">y</field></block></value><statement name="HANDLER"><block type="variables_set" id="#2@jBe]fV}y50[]5OOf@"><field name="VAR" id="?S}*o09IbIH5Y)^.Hf;T">mySprite</field><value name="VALUE"><shadow type="math_number" id="m@(:Xh]:w_m1_QB0#mYI"><field name="NUM">0</field></shadow><block type="spritescreate" id="PudOx]~bUo0$Wo#sE|%Y"><value name="img"><shadow type="screen_image_picker" id="@3yEJ/AxBF56VeA%f3EY"><field name="img">img`
-. . . . . . 2 2 2 2 . . . . . . 
-. . . . 2 2 3 3 3 3 2 e . . . . 
-. . . 2 3 d 1 1 d d 3 2 e . . . 
-. . 2 3 1 d 3 3 3 d d 3 e . . . 
-. 2 3 1 3 3 3 3 3 d 1 3 b e . . 
-. 2 1 d 3 3 3 3 d 3 3 1 3 b b . 
-2 3 1 d 3 3 1 1 3 3 3 1 3 4 b b 
-2 d 3 3 d 1 3 1 3 3 3 1 3 4 4 b 
-2 d 3 3 3 1 3 1 3 3 3 1 b 4 4 e 
-2 d 3 3 3 1 1 3 3 3 3 1 b 4 4 e 
-e d 3 3 3 3 d 3 3 3 d d b 4 4 e 
-e d d 3 3 3 d 3 3 3 1 3 b 4 b e 
-e 3 d 3 3 1 d d 3 d 1 b b e e . 
-. e 3 1 1 d d 1 1 1 b b e e e . 
-. . e 3 3 3 3 3 3 b e e e e . . 
-. . . e e e e e e e e e e . . . 
-`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="tA9,8F539y5Eg2tQ;a(e"><field name="MEMBER">Player</field></shadow></value></block></value></block></statement></block></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables></variables><block type="pxt-on-start" id="xRRgvHNlG#rZ^u`HECiY" x="0" y="0"></block></xml>
