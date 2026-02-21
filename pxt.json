@@ -10,7 +10,8 @@
         "README.md",
         "assets.json",
         "senseisblocks.ts",
-        "shim.d.ts"
+        "shim.d.ts",
+        "shims.cpp"
     ],
     "testFiles": [
         "test.ts"
