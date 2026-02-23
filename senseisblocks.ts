@@ -65,7 +65,7 @@ namespace senseisBlocks {
     }
 
 
-
+    
 
 
     const INTERNAL_POINTER_DOWN = 6868;
@@ -99,11 +99,6 @@ namespace senseisBlocks {
     ): boolean {
         return (x >= xpos1 && x <= xpos2 && y >= ypos1 && y <= ypos2)
     }
-
-
-
-
-
 
     /**
      * Convert a string to upper case
@@ -235,7 +230,6 @@ namespace senseisBlocks {
 
 
 
-
     /**
      * Create a sprite that is automatically scaled down to fit in 16x16
      */
@@ -262,4 +256,29 @@ namespace senseisBlocks {
     }
 
 
+    
+    export enum GameStates {
+        Playing,
+        Paused
+    }
+    
+    let state = GameStates.Playing
+
+    //% block="is game paused"
+    //% subcategory="Pause"
+    //% weight=70
+    export function isGamePaused(): Boolean{
+        return state == GameStates.Paused
+    }
+
+    //% block="toggle game pause state"
+    //% subcategory="Pause"
+    //% weight=70
+    export function togglePause() {
+        if (state == GameStates.Playing) {
+            state = GameStates.Paused
+        } else {
+            state = GameStates.Playing
+        }
+    }
 }
